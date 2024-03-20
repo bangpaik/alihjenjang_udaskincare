@@ -1,3 +1,4 @@
+import 'package:alihjenjang_udaskincare/bloc_pattern/counter_view.dart';
 import 'package:alihjenjang_udaskincare/screen_pages/page_register.dart';
 import 'package:alihjenjang_udaskincare/screen_pages/welcome_pages.dart';
 import 'package:flutter/gestures.dart';
@@ -76,7 +77,12 @@ class _PageLoginState extends State<PageLogin> {
                     ),
 
                     SizedBox(height: 40,),
-                    MaterialButton(onPressed: (){},
+                    MaterialButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)
+                        => CounterView()
+                      ));
+
+                    },
                       padding: EdgeInsets.symmetric(horizontal: 175,
                       vertical: 15,
                       ),
